@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Teko|Bungee+Hairline|Orbitron);
+
+body {
+  padding: 20px;
+  background-color: rgb(173, 82, 82);
+  color: white;
+  font-family: 'Teko', serif;
+}
+
+
+.drum-machine-body {
+  font-family: 'Teko', sans-serif;
+  background-color: #5a1818;
+  width: 450px;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+  margin-top: 10vh;
+  transform: translate(-50%, 0);
+}
+
+#body-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 75px;
+}
+
+.sound-display {
+  width: 200px;
+  height: 50px;
+  font-size: 30;
+  border-radius: 3px;
+  text-align: center;
+  font-family: 'Orbitron';
+  padding: 0.5em;
+  background-color: #a75a5a;
+  color: transparent
+  transition-duration 1s;
+  color:#B2FFBB;
+    border: 1px solid transparent;
+  border-top:no expectedcss(css-lcurlyexpected)ne;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+
+}
+
+button:focus { outline: none; }
+
+.power-button {
+  margin-top: 7px;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 0.5s;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+  
+  box-shadow: 1px 1px 1px 2px #161616;
+  border-radius: 50%;
+  background-color: black;
+  color: rgb(238, 202, 202);
+  &:after {
+    font-size: 12px;
+    content: 'Power';
+    color: #bfbfbf;
+    position: absolute;
+    display: block;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .svg {
+      fill: grey;
+      transition-duration: 0.5s;
+    }
+  
+.drum-pad-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 1em;
+  pointer-events: none;
+  border-radius: 10px;
+  background-color: #403c3c;
+  box-shadow: 1px 1px 10px;
+  &--on {
+    pointer-events: all;
+  }
+}
+
+.drum-pad {
+  position: relative;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  font-size: 50;
+  color: black;
+  background-color: #282828;
+  border-radius: 50%;
+  padding-top: 100%;
+  background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); 
+  box-shadow: -1px 1px 5px blue;
+}
+  &:focus 
+{
+    outline: none;
+  }
+  &--active, &:active {
+    box-shadow: 1px 1px 1px 3px #161616, inset 0 0 10px 1px #005ef7;
+    border-color: #005ef7;
+    color: #a0c4ff;
+    text-shadow: 0 0 5px #a0c4ff;
+    outline: none;
+  }
+}
+  .span {
+    position: absolute;
+    text-shadow: 0 0 0px black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
